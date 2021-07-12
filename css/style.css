@@ -210,7 +210,7 @@ body{
   box-sizing:border-box;
 }
 .aside-headline{
-  text-align:center;
+  text-align: center;
   line-height:3;
   font-weight:bold;
   font-size:14px;
@@ -593,6 +593,15 @@ body{
   width: 95%;
   margin-left: 0px;
 }
+.aside-headline{
+  margin-right: auto;
+  margin-left: auto;
+  width: 120px;
+}
+.aside-headline::after{
+  left: 30px;
+  bottom: 0px;
+}
 .goods-container{
   flex-wrap: wrap;
   justify-content: normal;
@@ -608,6 +617,6 @@ body{
   width: 95%;
 }
 .list-container{
-  width: 90%;
+  width: 95%;
 }
 }
