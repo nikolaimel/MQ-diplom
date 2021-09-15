@@ -5,9 +5,42 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>MQ Diploma</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<link rel="stylesheet" type="text/css" href="css/style.css">
 <body>
+  <div class="popup">
+  <div class="dimming2">
+    <div class="exit">
+      <button class="exit-btn"><span class="descrip">отмена</span></button>
+    </div>
+    <div class="popup_box">
+      <form>
+      <div class="popup-head"><h3 class="headline-popup">ваш фидбек</h3> </div>
+      <div class="select-div">
+        <div class="quest">Как часто вы заходите на сайт?</div>
+        <select class="select select1">
+          <option>Почти каждый день</option>
+          <option>Раз в неделю</option>
+          <option>Раз в месяц</option>
+          <option>Раз в год</option>
+        </select>
+      </div>
+      <div class="radio-div">
+        <div class="quest">Вы подписаны на e-mail рассылку?</div>
+         <div class="choice-div"><label><input type="radio" name="choice" class="radio"><span class="choice-text">Да</span></label> <label><input type="radio" name="choice" class="radio"><span class="choice-text">Нет</span> </label>
+         </div>
+      </div>
+   <div class="recomend">
+    <label><div class="quest">Расскажите, какой контент вы хотели бы видеть на нащем сайте?</div>
+    <input class="text-rec" placeholder="Может, больше рецептов?" required></label>
+     </div> 
+    <div class="button-div">
+      <button class="button-pop" type="reset">Отправить<span class="descrip">Отправить</span></button>
+    </div>
+  </form>
+  </div>
+</div>
+</div>
 <header class="header">
   <div class="dimming">
     <div class="container-header">
@@ -37,7 +70,7 @@
 <article class="trend">
   <h3 class="headline-trend-goods">Сейчас в тренде</h3>
   <div class="art-container">
-  	<div class="art-section1">
+  	<div class="art-section garden">
   		<div class="dimming1">
   		 <h3 class="art-headline">
   		 	<ul class="links">
@@ -48,7 +81,7 @@
   	</h3>
   	</div>
   	</div>
-<div class="art-section2">
+<div class="art-section  cheese">
 	<div class="dimming1">
   		<h3 class="art-headline">
   		<ul class="links">
@@ -57,7 +90,7 @@
     Cыры на красивых картинках из интернета: какие они на вкус?</h3>
     </div>
   	</div>
-<div class="art-section3">
+<div class="art-section mount">
 	<div class="dimming1">
   		<h3 class="art-headline">
   		<ul class="links">
@@ -67,7 +100,7 @@
     Собираемся в первый поход в горы</h3>
     </div>
   	</div>
-<div class="art-section4">
+<div class="art-section lemon">
 	<div class="dimming1">
   		<h3 class="art-headline"><ul class="links">
   		  <li class="point" id="food"><a href="#0" class="href-cat">food</a>
@@ -263,8 +296,8 @@
     <h3 class="section-headline">Подушки на диван</h3>
     <p class="text">Набор из двух подушек с модными принтами. Видео о создании <a href="#0" class="href-goods">здесь</a>.</p>
     <div class="cost">
-      <div class="cost-both"><span class="cost-s">1000 ₽</span><span class="cost-b">800 ₽</span></div>
-   <div> <button class="button-shop">Магазин</button></div>
+      <div class="cost-both"><div class="cost-s">1000 ₽</div><div class="cost-b">800 ₽</div></div>
+   <div> <button type="button" class="button-shop">Магазин<span class="descrip">Ссылка на магазин</span></button></div>
   </div>
     </div>
   </div>
@@ -279,8 +312,8 @@
     <h3 class="section-headline">Кукла «Зайчик»</h3>
     <p class="text">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#0" class="href-goods">весенняя серия постов</a> в блоге и несколько подкастов.</p>
     <div class="cost">
-      <div><span class="cost-b">3500 ₽</span></div>
-   <div> <button class="button-shop">Магазин</button></div>
+      <div><div class="cost-b">3500 ₽</div></div>
+   <div> <button type="button" class="button-shop">Магазин<span class="descrip">Ссылка на магазин</span></button></div>
   </div>
     </div>
   </div>
@@ -295,8 +328,8 @@
     <h3 class="section-headline">Шестиугольная рамка</h3>
     <p class="text">Необычная рамка для украшения дома из видео <a href="#0" class="href-goods">«Как сделать рамку из подручных средств за 30 минут»</a> </p>
     <div class="cost">
-      <div class="cost-both"><span class="cost-s">500 ₽</span><span class="cost-b">400 ₽</span></div>
-   <div> <button class="button-shop">Магазин</button></div>
+      <div class="cost-both"><div class="cost-s">500 ₽</div><div class="cost-b">400 ₽</div></div>
+   <div> <button type="button" class="button-shop">Магазин<span class="descrip">Ссылка на магазин</span></button></div>
   </div>
     </div>
   </div>
@@ -305,11 +338,11 @@
 <footer class="footer">
   <div class="list-container">
     <ul class="icon-list">
-      <li><a href="#0" class="icons twitter"></a>
-      <li><a href="#0" class="icons pinterest"></a>
-      <li><a href="#0" class="icons facebook"></a>
-      <li><a href="#0" class="icons instagram"></a>
-      <li><a href="#0" class="icons tumblr"></a>
+      <li><a href="#0" class="icons twitter"><span class="descrip">Иконка Твиттера</span></a>
+      <li><a href="#0" class="icons pinterest"><span class="descrip">Иконка Пинтереста</span></a>
+      <li><a href="#0" class="icons facebook"><span class="descrip">Иконка Фейсбука</span></a>
+      <li><a href="#0" class="icons instagram"><span class="descrip">Иконка Инстаграма</span></a>
+      <li><a href="#0" class="icons tumblr"><span class="descrip">Иконка Тамблера</span></a>
     </ul>
   </div>
   <div class="copy">

@@ -1,11 +1,11 @@
 @font-face{
   font-family:"Open Sans";
-  src:url(fonts/OpenSans-Regular.woff);
+  src:url(../fonts/OpenSans-Regular.woff);
   font-weight:400;
 }
 @font-face{
   font-family:"Open Sans";
-  src:url(fonts/OpenSans-Bold.woff);
+  src:url(../fonts/OpenSans-Bold.woff);
   font-weight:700;
 }
 *{
@@ -17,6 +17,161 @@ body{
   font-family:Open Sans;
   margin-right:auto;
   margin-left:auto;
+}
+.popup{
+  display: none; /*flex*/
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width:100%;
+  height:100%;
+}
+.dimming2{
+  position: relative;
+  padding: 40%;
+  background:rgba(0,0,0,0.5);
+}
+.popup_box{
+  width:400px;
+  min-height:600px;
+  background-color:white;
+}
+.exit{
+  padding-left: 373px;
+}
+.exit-btn{
+  background: rgba(0, 0, 0, 0);
+  border: 0;
+  width: 28px;
+  height:28px;
+  background-image: url("../svg/form-x.svg");
+  background-size: 25px;
+  background-repeat: no-repeat;
+}
+.headline-popup{
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight:bold;
+  text-transform:uppercase;
+  position: relative;
+}
+.headline-popup::after{
+  content:"";
+  background:#e1d9bd;
+  position:absolute;
+  width:66px;
+  height:3px;
+  bottom: -10px;
+  left:60px;
+}
+.popup-head{
+  text-align: center;
+  padding-top:40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.select-div{
+  flex-direction: column;
+  display: flex;
+  margin-top:40px; 
+}
+.quest{
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-weight:normal; 
+  font-size: 15px;
+}
+.select1{
+  background: #f4f7f6; 
+}  
+.select{
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  background-image:url("../svg/form-arrows.svg");
+  background-repeat:no-repeat;
+  background-position: right 30px center;
+  padding-left: 10px;
+  padding-right: 10px; 
+  color:#696969;
+  font-weight:bold; 
+  background-size: 10px;
+  border: 0;
+  height:48px;
+  width:80%;
+  margin-right: auto;
+  margin-left: auto;  
+}
+.radio-div{
+  margin-top: 20px;
+}
+.radio{
+  position:absolute;
+  clip:rect(1px,1px,1px,1px);
+  height:1px;
+  width:1px;
+}
+.choice-div{
+  margin-left:42px;
+}
+.radio:checked ~ .choice-text::before{
+  content: "";
+  display: inline-block;
+  width:20px;
+  height:20px;
+  background-image:url("../svg/form-circle.svg");
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-size: 15px;
+}
+.choice-text:last-child{
+  margin-right: 10px;
+}
+.choice-text::before{
+  vertical-align: middle;
+  content: "";
+  width:20px;
+  height:20px;
+  display: inline-block;
+  background-size: 15px;
+  background-image:url("../svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+}
+.recomend{
+  margin-top: 20px;
+  display: flex;
+}
+.text-rec{
+  box-sizing: border-box;
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px; 
+  color:#696969;
+  font-weight:bold; 
+  background: #f4f7f6;
+  border: 0;
+  height:100%;
+  width:80%;
+  margin-right: auto;
+  margin-left: auto;  
+}
+.button-div{
+  margin-top: 150px;
+  display: flex;
+}
+.button-pop{
+  display: block;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-size:14px;
+  color:white;
+  width:80%;
+  border:0;
+  border-radius:0px;
+  height:48px;
+  background:#b59f5b;
+  margin-right: auto;
+  margin-left: auto;
 }
 .header{
   background-image:url('../images/banner-bg.jpg');  
@@ -86,6 +241,7 @@ body{
   font-weight:bold;
   text-transform:uppercase;
   position:relative;
+  z-index: 1;
   margin-bottom:60px ;
 }
 .headline-trend-goods::after{
@@ -104,29 +260,29 @@ body{
 .dimming1{
   background:rgba(0,0,0,0.5);
   width: 100%;
-  heigth: 100%;
+  height: 100%;
   padding-top: 100px;
 }
-.art-section1, .art-section2, .art-section3, .art-section4{
+.art-section{
   display: flex;
   align-items: flex-start;
   flex-basis: 25%;
   background-size:cover;
 }
-.art-section1{
+.garden{
   background-image: url('../images/trend1.jpg'); 
 }
-.art-section2{
+.cheese{
   background-image: url('../images/trend2.jpg');
   margin-right: 2px;
   margin-left: 2px;
 }
-.art-section3{
+.mount{
   background-image: url('../images/trend3.jpg');
   margin-right: 2px;
   
 }
-.art-section4{
+.lemon{
   background-image: url('../images/trend4.jpg');
 }
 .art-headline{
@@ -224,7 +380,7 @@ body{
   width:66px;
   height:3px;
   bottom:0px;
-  left:105px;
+  left:85px;
 }
 .aside-section{
   margin-top:30px;
@@ -494,10 +650,10 @@ body{
 .art-container{
   flex-wrap: wrap;
 }
-.art-section1, .art-section2, .art-section3, .art-section4{
+.art-section{
   flex-basis: 49%;
 }  
-.art-section3, .art-section4{
+.mount, .lemon{
   margin-top: 2px;
 }
 .container-header{
@@ -561,7 +717,7 @@ body{
 .art-container{
   flex-wrap: wrap;
 }
-.art-section1, .art-section2, .art-section3, .art-section4{
+.art-section{
   flex-basis: 100%;
   margin: 0;
   margin-bottom: 2px;
